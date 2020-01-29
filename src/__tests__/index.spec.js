@@ -8,7 +8,7 @@ describe('LazyEvaluation', () => {
     expect(lazy.evaluate([1, 2, 3])).toEqual([1, 2, 3]);
   });
 
-  it('should return the evaluated input given the added computations given the added computations does not receive any params', () => {
+  it('should return the evaluated input given the added computations (added computations does not receive any params)', () => {
     lazy = new Lazy();
     lazy.add(Math.sqrt);
     expect(lazy.evaluate([1, 4, 9, 16])).toEqual([1, 2, 3, 4]);
@@ -29,7 +29,7 @@ describe('LazyEvaluation', () => {
       .evaluate([1, 4, 9])).toEqual([2, 3, 4]);
   });
 
-  it('should return the evaluated input given the added computations given the added computations will be given some params', () => {
+  it('should return the evaluated input given the added computations (added computations will be given some params)', () => {
     lazy = new Lazy();
     lazy.add((x, y) => x + y, 1);
     expect(lazy.evaluate([1, 2, 3])).toEqual([2, 3, 4]);
