@@ -1,0 +1,27 @@
+{
+  "name": "lazy-evaluation",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest --config jest.config.json",
+    "lint": "eslint 'src/**/*.js'"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.0",
+    "jest": "^25.1.0",
+    "pre-commit": "^1.2.2"
+  }
+}
