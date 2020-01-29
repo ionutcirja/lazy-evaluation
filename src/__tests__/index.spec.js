@@ -44,6 +44,12 @@ describe('LazyEvaluation', () => {
     lazy.add((x, y) => x + y, 1);
     lazy.add((x, y, z) => x + y + z, 4, 3);
     expect(lazy.evaluate([1, 4, 9])).toEqual([9, 10, 11]);
+
+    lazy = new Lazy();
+    expect(lazy
+      .add((x) => x * 2)
+      .add((x, y) => x + y, 1)
+      .evaluate([1, 2, 3])).toEqual([3, 5, 7]);
   });
 
   it('should return the evaluated input if the computations list was cleared', () => {
